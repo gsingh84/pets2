@@ -73,6 +73,8 @@ $f3->route('GET|POST /new-pet', function($f3){
         $f3->set('color', $color);
         $f3->set('petname', $petname);
         $f3->set('pettype', $pettype);
+        global $success;
+        $f3->set('success', $success);
     }
     $template = new Template();
     echo $template->render('views/order-pet.html');
