@@ -12,9 +12,9 @@ function validString($petname)
 
 $errors = array();
 
-    if (!validColor($color))
-    {
-        $errors['color']= "Please enter a valid color.";
-    }
+if (!validColor($color))
+{
+    $errors['color']= "Please enter a valid color.";
+}
 
-    $success = sizeof($errors) == 0;
+$success = sizeof($errors) == 0;

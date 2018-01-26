@@ -17,8 +17,8 @@
 
         <div class="col-4">
             <label>Pet Color</label>
-            <select class="form-control" name="petcolor">
-                <option>--Select--</option>
+            <select class="form-control" name="pet-color">
+                <option value="">--Select--</option>
                 <repeat group="{{ @colors }}" value="{{ @colorOption }}">
                     <option>{{ @colorOption}}</option>
                 </repeat>
@@ -29,6 +29,13 @@
             <label>Pet Type</label>
             <input type="text" class="form-control" name="pettype" value="">
         </div>
+        </div>
+
+        <div style="margin-top: 10px;"></div>
+        <div class="row">
+            <div class="col-12">
+                <button class="btn btn-primary float-right" name="submit">Submit</button>
+            </div>
         </div>
     </form>
 </div>

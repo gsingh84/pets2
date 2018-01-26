@@ -61,6 +61,19 @@ $f3->route('POST /pets/results',
 });
 
 $f3->route('GET|POST /new-pet', function($f3){
+
+    if(isset($_POST['submit']))
+    {
+        include ('model/validate.php');
+
+        $color = $_POST['pet-color'];
+        $petname = $_POST['petname'];
+        $pettype = $_POST['pettype'];
+
+        $f3->set('color', $color);
+        $f3->set('petname', $petname);
+        $f3->set('pettype', $pettype);
+    }
     $template = new Template();
     echo $template->render('views/order-pet.html');
 });
